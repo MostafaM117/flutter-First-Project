@@ -35,10 +35,13 @@ class MyHomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TRADE FINDER', 
-        style: TextStyle(fontSize: 28.0 ,
-        fontWeight: FontWeight.bold,
-        ),),
+        title: const Text.rich(TextSpan(
+              children: <TextSpan>[
+                TextSpan(text: 'Trade',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold, color: Colors.black)),
+                TextSpan(text: ' ',),
+                TextSpan(text: 'Finder',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold, color: Colors.white,))
+              ]
+            )),
         backgroundColor: const Color(0xffA0D44E),
         centerTitle: true,
         leading: const Icon(Icons.arrow_back),
@@ -55,7 +58,6 @@ class MyHomePage extends StatelessWidget{
         Container(
         height: 644 ,
         width: 350,
-        // padding: const EdgeInsets.only(left: 50,right: 50),
         decoration: BoxDecoration(color: Colors.white, boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.2))]),
         child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
